@@ -1,0 +1,15 @@
+[project]
+name = "cpp-httplib-example"
+
+[fetch-content.openssl_shim]
+git = "https://github.com/openssl-shim/openssl-shim"
+tag = "master"
+
+[fetch-content.cpp-httplib]
+git = "https://github.com/yhirose/cpp-httplib"
+tag = "v0.33.1"
+
+[target.httplib_example]
+type = "executable"
+sources = ["src/httplib_example.cpp"]
+link-libraries = ["httplib::httplib"]
